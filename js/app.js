@@ -41,9 +41,6 @@ function createResourceCard(resource) {
                     <div>
                         <span class="resource-name">${resource.name}</span>
                         <span class="resource-description">${resource.description}</span>
-                        <div class="resource-tags">
-                            ${resource.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                        </div>
                     </div>
                 </a>
             </div>
