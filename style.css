@@ -1,10 +1,10 @@
 /* Global Styles */
 :root {
-  --primary-gradient: linear-gradient(to right, #2980b9, #6dd5fa);
-  --secondary-gradient: linear-gradient(to right, #2980b9, #6dd5fa);
-  --accent-gradient: linear-gradient(to right, #2980b9, #6dd5fa);
-  --primary-color: linear-gradient(to right, #2980b9, #6dd5fa);
-  --primary-dark: linear-gradient(to right, #2980b9, #6dd5fa);
+  --primary-gradient: linear-gradient(135deg, #2980b9, #6dd5fa);
+  --secondary-gradient: linear-gradient(135deg, #2980b9, #6dd5fa);
+  --accent-gradient: linear-gradient(135deg, #2980b9, #6dd5fa);
+  --primary-color: #2980b9;
+  --primary-dark: #2980b9;
   --primary-light: #e0e7ff;
   --text-color: #1f2937;
   --text-light: #6b7280;
@@ -203,34 +203,37 @@ main {
 }
 
 .category-card {
-  background-color: var(--card-background);
+  background: white;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: none;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+  position: relative;
 }
 
 .category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
 .category-card h3 {
   font-size: 1.25rem;
   padding: 1.5rem;
   margin: 0;
-  background: var(--accent-gradient);
   color: white;
   display: flex;
   align-items: center;
   gap: 0.75rem;
   font-weight: 600;
   letter-spacing: -0.01em;
+  background: var(--primary-gradient);
+  backdrop-filter: blur(8px);
 }
 
 .category-content {
   padding: 1.5rem;
+  background: white;
 }
 
 /* Resource Items */
@@ -238,21 +241,19 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: var(--background-color);
+  background: white;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
   margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
-
-.resource-item:last-child {
-  margin-bottom: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .resource-item:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
   border-color: transparent;
 }
 
@@ -260,6 +261,8 @@ main {
   display: flex;
   gap: 1rem;
   flex: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .resource-icon {
@@ -273,11 +276,12 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: transform 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .resource-item:hover .resource-icon {
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .resource-icon i {
@@ -294,15 +298,23 @@ main {
   flex: 1;
   text-decoration: none;
   color: inherit;
+  position: relative;
+  z-index: 1;
 }
 
 .resource-name {
+  font-family: var(--font-heading);
   font-weight: 600;
   font-size: 1.125rem;
   color: var(--text-color);
   display: block;
   margin-bottom: 0.25rem;
   letter-spacing: -0.01em;
+  transition: color 0.3s ease;
+}
+
+.resource-item:hover .resource-name {
+  color: var(--primary-color);
 }
 
 .resource-description {
@@ -310,6 +322,7 @@ main {
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
   line-height: 1.6;
+  font-family: var(--font-body);
 }
 
 .resource-tags {
@@ -322,14 +335,16 @@ main {
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
   background: var(--primary-light);
-  color: var(--primary-dark);
+  color: var(--primary-color);
   border-radius: 9999px;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .tag:hover {
-  background: var(--primary-dark);
+  background: var(--primary-gradient);
   color: white;
 }
 
@@ -340,13 +355,15 @@ main {
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1.25rem;
-  transition: all 0.2s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   margin-left: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .action-button:hover {
   color: var(--primary-color);
-  transform: scale(1.1);
+  transform: scale(1.2) rotate(15deg);
 }
 
 .action-button .text-yellow-400 {
@@ -779,6 +796,18 @@ main {
   .resource-item:hover,
   .category-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .category-card {
+    background: var(--card-background);
+  }
+
+  .category-content {
+    background: var(--card-background);
+  }
+
+  .resource-item {
+    background: var(--card-background);
   }
 }
 
