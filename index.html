@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toolify - Tools That Matter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header/Navigation -->
+    <header>
+      <nav class="container">
+        <div class="nav-left">
+          <h1>Toolify</h1>
+          <!-- <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search resources..."
+            />
+            <button class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div> -->
+        </div>
+        <div class="nav-right">
+          <button id="toolkitBtn" class="toolkit-button">
+            <i class="fas fa-toolbox"></i>
+            <span>My Toolkit</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="container">
+        <div class="welcome-content">
+          <h2 class="welcome-title">Welcome to Toolify</h2>
+          <p class="welcome-text">
+            Your one-stop platform for discovering the best development tools,
+            frameworks, and resources.
+          </p>
+          <div class="welcome-stats">
+            <div class="stat-item">
+              <span class="stat-number">35</span>
+              <span class="stat-label">Development Tools <br> More Coming Soon</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">7</span>
+              <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Resource Access</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- Categories Section -->
+      <section class="categories-grid">
+        <!-- AI Tools -->
+        <div class="category-card" data-category="ai">
+          <h3><i class="fas fa-robot"></i> AI Tools</h3>
+          <div class="category-content" id="aiTools"></div>
+        </div>
+
+        <!-- Free Resources -->
+        <div class="category-card" data-category="resources">
+          <h3><i class="fas fa-images"></i> Free Resources</h3>
+          <div class="category-content" id="freeResources"></div>
+        </div>
+
+        <!-- Frontend Frameworks -->
+        <div class="category-card" data-category="frontend">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="category-content" id="frontendFrameworks"></div>
+        </div>
+
+        <!-- Backend Frameworks -->
+        <div class="category-card" data-category="backend">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="category-content" id="backendFrameworks"></div>
+        </div>
+
+        <!-- Mobile Development -->
+        <div class="category-card" data-category="mobile">
+          <h3><i class="fas fa-mobile-alt"></i> Mobile Dev</h3>
+          <div class="category-content" id="mobileDev"></div>
+        </div>
+
+        <!-- Game Development -->
+        <div class="category-card" data-category="game">
+          <h3><i class="fas fa-gamepad"></i> Game Dev</h3>
+          <div class="category-content" id="gameDev"></div>
+        </div>
+
+        <!-- Design Tools -->
+        <div class="category-card" data-category="design">
+          <h3><i class="fas fa-palette"></i> Design Tools</h3>
+          <div class="category-content" id="designTools"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Toolkit Sidebar -->
+    <div id="toolkitSidebar" class="toolkit-sidebar">
+      <div class="toolkit-content">
+        <div class="toolkit-header">
+          <h2>My Toolkit</h2>
+          <button id="closeToolkit" class="close-button">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="toolkitItems" class="toolkit-items"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>DevResources</h4>
+            <p>
+              Your one-stop platform for discovering the best development tools
+              and resources.
+            </p>
+            <div class="social-links">
+              <a href="https://github.com/Scripts-By-Hamza" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/muhammad-hamza-24d03/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#aiTools">AI Tools</a></li>
+              <li><a href="#freeResources">Free Resources</a></li>
+              <li><a href="#frontendFrameworks">Frontend</a></li>
+              <li><a href="#backendFrameworks">Backend</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>More</h4>
+            <ul>
+              <li><a href="#mobileDev">Mobile Dev</a></li>
+              <li><a href="#gameDev">Game Dev</a></li>
+              <li><a href="#designTools">Design Tools</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Newsletter</h4>
+            <p>Stay updated with the latest development resources.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Toolify. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="https://github.com/Scripts-By-Hamza">Script By Hamza</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
