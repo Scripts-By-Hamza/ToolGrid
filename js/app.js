@@ -138,29 +138,33 @@ function searchResources(query) {
 // Setup event listeners
 function setupEventListeners() {
     // Search input
-    searchInput.addEventListener('input', (e) => {
-        searchResources(e.target.value);
-    });
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchResources(e.target.value);
+        });
+    }
 
     // Toolkit sidebar
-    toolkitBtn.addEventListener('click', () => {
-        toolkitSidebar.classList.add('open');
-        renderToolkit();
-    });
+    if (toolkitBtn && toolkitSidebar && closeToolkit) {
+        toolkitBtn.addEventListener('click', () => {
+            toolkitSidebar.classList.add('open');
+            renderToolkit();
+        });
 
-    closeToolkit.addEventListener('click', () => {
-        toolkitSidebar.classList.remove('open');
-    });
-
-    // Close sidebar on outside click
-    document.addEventListener('click', (e) => {
-        if (!toolkitSidebar.contains(e.target) && !toolkitBtn.contains(e.target)) {
+        closeToolkit.addEventListener('click', () => {
             toolkitSidebar.classList.remove('open');
-        }
-    });
+        });
+
+        // Close sidebar on outside click
+        document.addEventListener('click', (e) => {
+            if (!toolkitSidebar.contains(e.target) && !toolkitBtn.contains(e.target)) {
+                toolkitSidebar.classList.remove('open');
+            }
+        });
+    }
 }
 
-// Initialize when DOM is loaded
+// Call initializeApp when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeApp);
 
 // Scroll to Top Functionality

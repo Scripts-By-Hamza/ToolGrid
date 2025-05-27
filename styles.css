@@ -65,6 +65,18 @@ header {
   backdrop-filter: blur(8px);
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
 nav {
   height: 100%;
   display: flex;

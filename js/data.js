@@ -1,5 +1,5 @@
 const resources = {
-  aiTools: [
+  codingTools: [
     {
       id: "chatgpt",
       name: "ChatGPT",
@@ -48,6 +48,75 @@ const resources = {
       category: "AI Assistant",
     },
     {
+      id: "cursorai",
+      name: "Cursor AI",
+      description: "Advanced AI assistant for coding and technical writing",
+      icon: "./images/cursor.png",
+      tags: ["ai", "premium", "coding", "writing"],
+      url: "https://www.cursor.com/",
+      category: "AI Assistant",
+    },
+
+    // {
+    //   id: "elevenLabs",
+    //   name: "ElevenLabs",
+    //   description:
+    //     "Advanced language model for code explanation, debugging, and problem-solving",
+    //   icon: "./images/eleven.png",
+    //   tags: ["ai", "free", "coding", "writing"],
+    //   url: "https://elevenlabs.io/?utm_source=google&utm_medium=cpc&utm_campaign=pakistan_brandsearch_brand_english&utm_id=22349494772&utm_term=elevenlabs&utm_content=brand_-_brand&gad_source=1&gad_campaignid=22349494772&gbraid=0AAAAAp9ksTFHDUe-Zg7zjrjgiVzDEfZxH&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6gJwBKsbqBj4Z9M-eEfVQqSP4KCEpN990jfSLzHcIDF7yPIKCGB2yQaArkCEALw_wcB",
+    //   category: "AI Assistant",
+    // },
+  ],
+
+  imageGeneration: [
+    {
+      id: "midjourney",
+      name: "Midjourney",
+      description: "known for artistic and stylized image generations.",
+      icon: "./images/mid.png",
+      tags: ["ai", "premium", "design"],
+      url: "https://www.midjourney.com",
+      category: "Design",
+    },
+    {
+      id: "leonardo ai",
+      name: "Leonardo Ai",
+      description:
+        "fast-growing platform for image generation, often used for game assets.",
+      icon: "./images/leonardo.jfif",
+      tags: ["ai", "free", "image"],
+      url: "https://leonardo.ai/",
+      category: "Design",
+    },
+    {
+      id: "stablediffusion",
+      name: "Stable Diffusion",
+      description: "open-source, highly customizable image generation model.",
+      icon: "./images/stable.jfif",
+      tags: ["ai", "free", "image"],
+      url: "https://stablediffusionweb.com/",
+      category: "Design",
+    },
+    {
+      id: "runway",
+      name: "Runway ML",
+      description: "offers image generation and AI video editing features.",
+      icon: "./images/runway.png",
+      tags: ["ai", "free", "image"],
+      url: "https://runwayml.com/",
+      category: "Design",
+    },
+    {
+      id: "adobefirefly",
+      name: "Adobe Firefly",
+      description: "offers image generation and AI video editing features.",
+      icon: "./images/adobeFirely.png",
+      tags: ["ai", "free", "image"],
+      url: "https://www.adobe.com/products/firefly.html",
+      category: "Design",
+    },
+    {
       id: "dalle",
       name: "DALL·E 3",
       description: "AI image generation for design assets and illustrations",
@@ -56,16 +125,8 @@ const resources = {
       url: "https://openai.com/dall-e-3",
       category: "Design",
     },
-    {
-      id: "midjourney",
-      name: "Midjourney",
-      description: "AI art and image generation tool",
-      icon: "./images/mid.png",
-      tags: ["ai", "premium", "design"],
-      url: "https://www.midjourney.com",
-      category: "Design",
-    },
   ],
+
   freeResources: [
     {
       id: "unsplash",
@@ -286,7 +347,7 @@ const resources = {
       id: "unity",
       name: "Unity",
       description: "Cross-platform game development engine",
-      icon: "./images/unity",
+      icon: "./images/unity.png",
       tags: ["free", "engines"],
       url: "https://unity.com",
       category: "Engines",
@@ -299,6 +360,28 @@ const resources = {
       tags: ["free", "frameworks"],
       url: "https://phaser.io",
       category: "Frameworks",
+    },
+  ],
+  datavisualization: [
+    {
+      id: "powerBi",
+      name: "Power Bi",
+      description:
+        "Microsoft’s business intelligence and data visualization tool.",
+      icon: "./images/power.jfif",
+      tags: ["ai", "premium", "design"],
+      url: "https://app.powerbi.com/singleSignOn?ru=https%3A%2F%2Fapp.powerbi.com%2F%3FnoSignUpCheck%3D1",
+      category: "Design",
+    },
+       {
+      id: "tableau",
+      name: "Tableau",
+      description:
+        "Interactive dashboards, visual analytics.",
+      icon: "./images/tableau.png",
+      tags: ["ai", "premium", "design"],
+      url: "https://app.powerbi.com/singleSignOn?ru=https%3A%2F%2Fapp.powerbi.com%2F%3FnoSignUpCheck%3D1",
+      category: "Design",
     },
   ],
   designTools: [
