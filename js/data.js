@@ -17,7 +17,7 @@ const resources = {
       description: "AI-powered code completion and generation tool",
       icon: "./images/deepseek.png",
       tags: ["ai", "free", "coding"],
-      url: "https://www.deepseek.com",
+      url: "https://chat.deepseek.com/",
       category: "Code Assistant",
     },
     {
